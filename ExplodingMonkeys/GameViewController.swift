@@ -22,15 +22,15 @@ class GameViewController: UIViewController {
     @IBOutlet weak var windDirection: UILabel!
     var currentGame: GameScene!
 
-    @IBAction func angleChange(_ sender: Any) {
+    @IBAction func angleChange(_ sender: UISlider) {
         angleLabel.text = "Angle: \(Int(angleSlider.value))°"
     }
     
-    @IBAction func velocityChange(_ sender: Any) {
+    @IBAction func velocityChange(_ sender: UISlider) {
         velocityLabel.text = "Velocity: \(Int(velocitySlider.value))"
     }
     
-    @IBAction func launch(_ sender: Any) {
+    @IBAction func launch(_ sender: UIButton) {
         angleSlider.isHidden = true
         angleLabel.isHidden = true
         
