@@ -34,10 +34,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             viewController.playerTwoScore.text = "PLAYER TWO SCORE: \(player2Score)"
         }
     }
+    var wind: CGVector!
+    var windPower: Int!
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         physicsWorld.contactDelegate = self
+        
+        windPower = Int.random(in: 1...3) * 3
+        wind = CGVector(dx: Bool.random() ? -windPower : windPower, dy: 0)
         
         createBuildings()
         createPlayers()
@@ -50,6 +55,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             banana.removeFromParent()
             banana = nil
             changePlayer()
+        }
+        
+        for node in self.children {
+            if node.physicsBody?.categoryBitMask == CollisionTypes.banana.rawValue {
+                node.physicsBody?.applyForce(wind)
+            }
         }
     }
     
@@ -136,6 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let newGame = GameScene(size: self.size)
                 newGame.viewController = self.viewController
                 self.viewController.currentGame = newGame
+                newGame.viewController.windDirection.text = self.wind.dx < 0 ? "\(String(repeating: "←", count: self.windPower / 3)) 💨" : "💨 \(String(repeating: "→", count: self.windPower / 3))"
                 
                 self.changePlayer()
                 newGame.currentPlayer = self.currentPlayer

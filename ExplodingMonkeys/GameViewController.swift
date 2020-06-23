@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playerNumber: UILabel!
     @IBOutlet weak var playerOneScore: UILabel!
     @IBOutlet weak var playerTwoScore: UILabel!
+    @IBOutlet weak var windDirection: UILabel!
     var currentGame: GameScene!
 
     @IBAction func angleChange(_ sender: Any) {
@@ -58,6 +59,7 @@ class GameViewController: UIViewController {
                 
                 currentGame = scene as? GameScene
                 currentGame.viewController = self
+                windDirection.text = currentGame.wind.dx < 0 ? "\(String(repeating: "←", count: currentGame.windPower / 3)) 💨" : "💨 \(String(repeating: "→", count: currentGame.windPower / 3))"
             }
             
             view.ignoresSiblingOrder = true

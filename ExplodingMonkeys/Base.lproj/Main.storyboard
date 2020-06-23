@@ -75,9 +75,17 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWB-mx-aXS">
+                                <rect key="frame" x="492.5" y="92.5" width="39.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xWB-mx-aXS" firstAttribute="top" secondItem="5Xw-GB-2UC" secondAttribute="bottom" constant="8" symbolic="YES" id="2WF-J8-fNX"/>
+                            <constraint firstItem="xWB-mx-aXS" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="6R6-hZ-zSk"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="McQ-KU-Z0L" secondAttribute="bottom" constant="14" id="7ba-7a-ISG"/>
                             <constraint firstItem="WZ3-cI-Dia" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="22" id="91H-kt-y7k"/>
                             <constraint firstItem="SMK-Rf-OcH" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="24" id="H0O-M0-8bW"/>
@@ -108,6 +116,7 @@
                         <outlet property="playerTwoScore" destination="R83-t7-8Sx" id="ygP-eV-udc"/>
                         <outlet property="velocityLabel" destination="LxP-tL-eSp" id="6gi-B3-ulU"/>
                         <outlet property="velocitySlider" destination="gYG-TQ-zsA" id="MRA-WF-NZS"/>
+                        <outlet property="windDirection" destination="xWB-mx-aXS" id="mh1-8L-XSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
