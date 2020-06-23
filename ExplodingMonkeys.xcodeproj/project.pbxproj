@@ -49,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		359DCE7A24A1F7C10032FB02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35A6B7A024A0E999007D74C4 /* spark.png */,
+				35A6B7A424A0E9A8007D74C4 /* banana@2x.png */,
+				35A6B7A224A0E9A8007D74C4 /* hitBuilding.sks */,
+				35A6B7A324A0E9A8007D74C4 /* hitPlayer.sks */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		35A6B77A24976DB3007D74C4 = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +85,7 @@
 				35A6B78E24976DB3007D74C4 /* GameViewController.swift */,
 				35A6B79E24978FF1007D74C4 /* BuildingNode.swift */,
 				35A6B79024976DB3007D74C4 /* Main.storyboard */,
-				35A6B7A024A0E999007D74C4 /* spark.png */,
-				35A6B7A424A0E9A8007D74C4 /* banana@2x.png */,
-				35A6B7A224A0E9A8007D74C4 /* hitBuilding.sks */,
-				35A6B7A324A0E9A8007D74C4 /* hitPlayer.sks */,
+				359DCE7A24A1F7C10032FB02 /* Supporting Files */,
 				35A6B79324976DB5007D74C4 /* Assets.xcassets */,
 				35A6B79524976DB5007D74C4 /* LaunchScreen.storyboard */,
 				35A6B79824976DB5007D74C4 /* Info.plist */,
