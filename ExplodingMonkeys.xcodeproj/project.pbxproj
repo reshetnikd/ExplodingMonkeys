@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		359DCE7C24A21C840032FB02 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359DCE7B24A21C840032FB02 /* EndGameScene.swift */; };
 		35A6B78724976DB3007D74C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6B78624976DB3007D74C4 /* AppDelegate.swift */; };
 		35A6B78924976DB3007D74C4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 35A6B78824976DB3007D74C4 /* GameScene.sks */; };
 		35A6B78D24976DB3007D74C4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6B78C24976DB3007D74C4 /* GameScene.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		359DCE7B24A21C840032FB02 /* EndGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		35A6B78324976DB3007D74C4 /* ExplodingMonkeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExplodingMonkeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A6B78624976DB3007D74C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A6B78824976DB3007D74C4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				35A6B78624976DB3007D74C4 /* AppDelegate.swift */,
 				35A6B78824976DB3007D74C4 /* GameScene.sks */,
 				35A6B78C24976DB3007D74C4 /* GameScene.swift */,
+				359DCE7B24A21C840032FB02 /* EndGameScene.swift */,
 				35A6B78E24976DB3007D74C4 /* GameViewController.swift */,
 				35A6B79E24978FF1007D74C4 /* BuildingNode.swift */,
 				35A6B79024976DB3007D74C4 /* Main.storyboard */,
@@ -173,6 +176,7 @@
 				35A6B79F24978FF1007D74C4 /* BuildingNode.swift in Sources */,
 				35A6B78F24976DB3007D74C4 /* GameViewController.swift in Sources */,
 				35A6B78724976DB3007D74C4 /* AppDelegate.swift in Sources */,
+				359DCE7C24A21C840032FB02 /* EndGameScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

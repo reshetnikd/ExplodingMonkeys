@@ -24,6 +24,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var banana: SKSpriteNode!
     
     var currentPlayer = 1
+    var player1Score = 0 {
+        didSet {
+            viewController.playerOneScore.text = "PLAYER ONE SCORE: \(player1Score)"
+        }
+    }
+    var player2Score = 0 {
+        didSet {
+            viewController.playerTwoScore.text = "PLAYER TWO SCORE: \(player2Score)"
+        }
+    }
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
@@ -104,19 +114,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             addChild(explosion)
         }
         
+        if player.name == "player1" {
+            player2Score += 1
+        } else {
+            player1Score += 1
+        }
+        
         player.removeFromParent()
         banana.removeFromParent()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let newGame = GameScene(size: self.size)
-            newGame.viewController = self.viewController
-            self.viewController.currentGame = newGame
-            
-            self.changePlayer()
-            newGame.currentPlayer = self.currentPlayer
-            
-            let transition = SKTransition.doorway(withDuration: 1.5)
-            self.view?.presentScene(newGame, transition: transition)
+        if player1Score > 2 || player2Score > 2 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let endGame = EndGameScene(size: self.size)
+                endGame.viewController = self.viewController
+                
+                let transition = SKTransition.fade(withDuration: 1.5)
+                self.view?.presentScene(endGame, transition: transition)
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let newGame = GameScene(size: self.size)
+                newGame.viewController = self.viewController
+                self.viewController.currentGame = newGame
+                
+                self.changePlayer()
+                newGame.currentPlayer = self.currentPlayer
+                newGame.player1Score = self.player1Score
+                newGame.player2Score = self.player2Score
+                
+                let transition = SKTransition.doorway(withDuration: 1.5)
+                self.view?.presentScene(newGame, transition: transition)
+            }
         }
     }
     
